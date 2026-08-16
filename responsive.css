@@ -1,0 +1,228 @@
+@media (max-width: 850px) {
+  .dashboard-hero { align-items: flex-start; flex-direction: column; }
+  .dashboard-hero .button { width: 100%; }
+  .mode-picker-options { grid-template-columns: 1fr; }
+  .settings-trigger { margin-left: 0; }
+  .settings-panel { padding: 27px 20px; }
+  .mode-grid, .sales-intro, .sales-asset-grid { grid-template-columns: 1fr; }
+  .sales-form-grid, .roleplay-settings, .visit-form { grid-template-columns: 1fr; }
+  .score-metrics { grid-template-columns: repeat(2, 1fr); }
+  .pipeline-board { grid-template-columns: repeat(5, 205px); }
+  .conversation-question-full, .sales-asset-wide, .visit-form .full { grid-column: auto; }
+  .sales-intro { gap: 20px; }
+  .kit-header, .roleplay-header, .visit-header { align-items: flex-start; flex-direction: column; }
+  .container {
+    width: min(100% - 36px, 620px);
+  }
+  .main-nav,
+  .site-header > .button,
+  .app-nav,
+  .header-actions {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 65px 0 90px;
+    gap: 20px;
+  }
+  .hero-visual {
+    height: 390px;
+  }
+  .section {
+    padding: 85px 0;
+  }
+  .section-heading {
+    display: block;
+  }
+  .section-heading > p {
+    margin-top: 22px;
+  }
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-card {
+    min-height: 280px;
+  }
+  .feature-card h3 {
+    margin-top: 55px;
+  }
+  .manifesto {
+    padding: 85px 0;
+  }
+  .manifesto-mark {
+    display: none;
+  }
+  .site-footer {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .workspace-main,
+  .history-main,
+  .pitch-main {
+    padding-top: 45px;
+  }
+  .page-intro {
+    display: block;
+  }
+  .page-intro > .text-link,
+  .intro-note {
+    display: block;
+    margin-top: 22px;
+  }
+  .workspace-layout {
+    grid-template-columns: 1fr;
+  }
+  .workspace-aside {
+    grid-template-columns: 1fr 1fr;
+  }
+  .form-submit {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .form-submit .button {
+    width: 100%;
+  }
+  .analysis-top {
+    display: block;
+  }
+  .analysis-actions {
+    margin-top: 20px;
+  }
+  .analysis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .insight-columns,
+  .pitch-grid {
+    grid-template-columns: 1fr;
+  }
+  .pitch-card-wide {
+    grid-column: auto;
+  }
+  .pitch-structure {
+    grid-template-columns: 1fr;
+  }
+  .history-item {
+    grid-template-columns: 1fr;
+  }
+  .history-item-actions {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 520px) {
+  .dashboard-hero { padding-bottom: 32px; }
+  .dashboard-section-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .dashboard-card { flex-basis: 280px; }
+  .mode-picker { padding: 14px; }
+  .mode-picker-card { padding: 27px 20px; }
+  .mode-picker-card h2 { font-size: 32px; }
+  .mode-chooser, .sales-main { padding-top: 45px; padding-bottom: 55px; }
+  .mode-card { min-height: 190px; padding: 22px; }
+  .mode-card h3 { font-size: 26px; }
+  .sales-form { padding: 18px; }
+  .reply-form { flex-direction: column; }
+  .reply-actions { justify-content: flex-end; }
+  .score-grid, .score-metrics { grid-template-columns: 1fr; }
+  .roleplay-header-actions, .visit-header-actions { width: 100%; }
+  .roleplay-header-actions .button, .visit-header-actions .button { flex: 1; }
+}
+@media (max-width: 520px) {
+  h1 {
+    font-size: 49px;
+  }
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+  }
+  .hero-visual {
+    height: 330px;
+    transform: scale(0.86);
+    transform-origin: center;
+  }
+  .signal-card-main {
+    width: 315px;
+  }
+  .note-risk {
+    right: -10px;
+    top: 50px;
+  }
+  .note-win {
+    left: -12px;
+    bottom: 40px;
+  }
+  .trust-strip {
+    display: block;
+    line-height: 2;
+  }
+  .trust-line {
+    display: none;
+  }
+  .trust-strip .mono {
+    display: block;
+    margin-top: 8px;
+  }
+  .workspace-form-panel,
+  .analysis-panel {
+    padding: 22px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .workspace-aside {
+    grid-template-columns: 1fr;
+  }
+  .analysis-top h2 {
+    font-size: 34px;
+  }
+  .analysis-grid {
+    gap: 7px;
+  }
+  .metric-card {
+    padding: 12px;
+  }
+  .metric-card strong {
+    font-size: 22px;
+  }
+  .analysis-footer {
+    display: block;
+  }
+  .analysis-footer .button {
+    margin-top: 17px;
+    width: 100%;
+  }
+  .pitch-hero {
+    padding: 27px;
+  }
+  .pitch-card {
+    padding: 21px;
+  }
+}
+@media (max-width: 850px) {
+  .main-nav.mobile-open,
+  .app-nav.mobile-open,
+  .header-actions.mobile-open {
+    display: flex;
+    position: absolute;
+    z-index: 8;
+    top: 74px;
+    right: 18px;
+    left: 18px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: var(--shadow);
+  }
+  .main-nav.mobile-open,
+  .app-nav.mobile-open {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .header-actions.mobile-open {
+    justify-content: space-between;
+  }
+}
