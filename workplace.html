@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Stress-test your startup idea with PitchPilot."
+    />
+    <title>Workspace — PitchPilot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body class="app-page">
+    <header class="app-header container">
+      <a class="brand" href="../index.html"
+        ><span class="brand-mark">✦</span
+        ><span>pitch<span>pilot</span></span></a
+      >
+      <nav class="app-nav">
+        <a class="active" href="workspace.html">Workspace</a>
+      </nav>
+      <div class="header-actions">
+        <span class="mode-badge"><i></i> Mock intelligence</span
+        ><button class="button button-small button-ghost settings-trigger" type="button" id="settingsButton" aria-controls="settingsPanel" aria-expanded="false">Settings <span>⚙</span></button
+        ><a class="button button-small button-ghost" href="../index.html"
+          >Exit <span>↗</span></a
+        >
+      </div>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
+    </header>
+    <main class="container workspace-main">
+      <section class="workspace-dashboard" id="workspaceDashboard">
+        <div class="dashboard-hero">
+          <div><div class="eyebrow">PitchPilot / Your command center</div><h1>What are you<br /><em>working on?</em></h1><p>Start a founder challenge, review your thinking, or practice your next sales conversation.</p></div>
+          <button class="button button-primary button-large" type="button" id="newProjectButton"><span>+</span> New project</button>
+        </div>
+        <section class="dashboard-section">
+          <div class="dashboard-section-heading"><div><span class="eyebrow">Founder mode / Recent work</span><h2>Project history</h2></div><span class="mono" id="projectCount">0 projects</span></div>
+          <div class="dashboard-rail" id="projectHistoryRail"></div>
+        </section>
+        <section class="dashboard-section practice-section">
+          <div class="dashboard-section-heading"><div><span class="eyebrow">Salesperson mode / Practice</span><h2>Practice sessions</h2></div><a class="text-link" href="sales.html">Open sales coach <span>→</span></a></div>
+          <div class="dashboard-rail" id="practiceHistoryRail"></div>
+        </section>
+      </section>
+      <div class="mode-picker hidden" id="modePicker" role="dialog" aria-modal="true" aria-labelledby="modePickerTitle">
+        <div class="mode-picker-card"><button class="icon-button mode-picker-close" type="button" id="closeModePicker" aria-label="Close new project chooser">×</button><span class="eyebrow">New project</span><h2 id="modePickerTitle">How do you want<br /><em>to work today?</em></h2><p>Choose a focused workspace. You can switch modes whenever you need.</p><div class="mode-picker-options"><a class="mode-picker-option founder-option" href="workspace.html?new=founder"><span class="mono">01 / Founder mode</span><strong>Challenge an idea</strong><small>Pressure-test the problem, market, risks, and next moves.</small><span class="mode-arrow">→</span></a><a class="mode-picker-option sales-option" href="sales.html"><span class="mono">02 / Salesperson mode</span><strong>Practice a conversation</strong><small>Build a sales kit, roleplay customers, and sharpen your close.</small><span class="mode-arrow">→</span></a></div></div>
+      </div>
+      <div class="workspace-editor hidden" id="workspaceEditor">
+      <div class="page-intro">
+        <div>
+          <div class="eyebrow">
+            Workspace / <span id="workspaceStatus">New project</span>
+          </div>
+          <h1>Founder<br /><em>workspace.</em></h1>
+        </div>
+      </div>
+      <div class="workspace-layout">
+        <section class="workspace-form-panel">
+          <form id="ideaForm" novalidate>
+            <div class="form-section-heading">
+              <span class="form-index">01</span>
+              <div>
+                <h2>The raw material</h2>
+                <p>Start with the simplest version of your thinking.</p>
+              </div>
+            </div>
+            <label for="idea"
+              >What are you building?
+              <span class="required">Required</span></label
+            ><textarea
+              id="idea"
+              name="idea"
+              rows="4"
+              placeholder="e.g. A mobile app that helps independent restaurants reduce food waste by selling end-of-day surplus..."
+              required
+            ></textarea>
+            <div class="field-meta">
+              <span>Be specific. Specificity creates signal.</span
+              ><span id="ideaCount">0 / 600</span>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="customer"
+                  >Who is it for? <span class="required">Required</span></label
+                ><input
+                  id="customer"
+                  name="customer"
+                  placeholder="e.g. Independent restaurant owners"
+                  required
+                />
+              </div>
+              <div>
+                <label for="problem"
+                  >What problem does it solve?
+                  <span class="required">Required</span></label
+                ><input
+                  id="problem"
+                  name="problem"
+                  placeholder="e.g. Unsold food becomes expensive waste"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-section-heading optional-heading">
+              <span class="form-index">02</span>
+              <div>
+                <h2>Add some texture <span>(optional)</span></h2>
+                <p>More context gives the challenge more teeth.</p>
+              </div>
+            </div>
+            <label for="businessModel">How might it make money?</label
+            ><input
+              id="businessModel"
+              name="businessModel"
+              placeholder="e.g. 5% transaction fee + pro subscription"
+            /><label for="context">Anything else we should know?</label
+            ><textarea
+              id="context"
+              name="context"
+              rows="3"
+              placeholder="Your current traction, competitors, constraints, or the thing you’re most unsure about..."
+            ></textarea>
+            <div class="form-submit">
+              <p>
+                <span class="sparkle">✦</span> You’ll get a full signal report
+                in seconds.
+              </p>
+              <button
+                class="button button-primary button-large"
+                type="submit"
+                id="analyzeButton"
+              >
+                Challenge my idea <span>→</span>
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <section id="analysisPanel" class="analysis-panel hidden"></section>
+      </div>
+    </main>
+    <aside class="settings-panel" id="settingsPanel" aria-hidden="true">
+      <div class="settings-panel-header">
+        <div><span class="eyebrow">Workspace preferences</span><h2>Make it<br /><em>yours.</em></h2></div>
+        <button class="icon-button" type="button" id="closeSettings" aria-label="Close settings">×</button>
+      </div>
+      <p class="settings-description">Tune the reading experience. Your choices stay on this device.</p>
+      <div class="settings-group">
+        <label for="fontSizeSetting">Text size</label>
+        <select id="fontSizeSetting"><option value="small">Small</option><option value="medium">Medium</option><option value="large">Large</option></select>
+      </div>
+      <div class="settings-group">
+        <label for="textColorSetting">Text color</label>
+        <select id="textColorSetting"><option value="ink">Ink</option><option value="slate">Slate</option><option value="warm">Warm</option></select>
+      </div>
+      <div class="settings-group"><span class="settings-label">Appearance</span><div class="settings-choice-grid" role="group" aria-label="Appearance"><button type="button" data-theme-choice="light">Light</button><button type="button" data-theme-choice="dark">Dark</button><button type="button" data-theme-choice="dusk">Dusk</button></div></div>
+      <div class="settings-group"><span class="settings-label">Color theory</span><div class="settings-choice-grid accent-choices" role="group" aria-label="Accent color"><button type="button" data-accent-choice="orange">Orange</button><button type="button" data-accent-choice="blue">Blue</button><button type="button" data-accent-choice="violet">Violet</button><button type="button" data-accent-choice="green">Green</button></div></div>
+      <div class="settings-group settings-toggle-row"><div><span class="settings-label">Compact workspace</span><small>Reduce panel spacing for more signal on screen.</small></div><label class="switch"><input type="checkbox" id="compactSetting" /><span></span></label></div>
+      <button class="button button-dark settings-reset" type="button" id="resetSettings">Reset preferences</button>
+    </aside>
+    <div class="settings-scrim" id="settingsScrim"></div>
+    <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+    <div id="loadingOverlay" class="loading-overlay hidden">
+      <div class="loading-card">
+        <div class="loader-orbit">✦</div>
+        <p>Reading between the lines<span>...</span></p>
+        <small>Building your honest signal report</small>
+      </div>
+    </div>
+    <script>
+  window.PITCHPILOT_CONFIG = {
+    mode: "live",
+    transport: "direct",
+    apiKey: "AQ.Ab8RN6KS1DeojYMIIglJptPWsvZ83OPwxRLf3Af9QglSqOKTTA"
+  };
+</script>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/ai.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/app.js?v=workspace-dashboard"></script>
+    <script src="../js/settings.js?v=workspace-dashboard"></script>
+    <script src="../js/motion.js"></script>
+  </body>
+</html>
