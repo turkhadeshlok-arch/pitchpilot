@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />      
+    <title>History — PitchPilot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body class="app-page">
+    <header class="app-header container">
+      <a class="brand" href="../index.html"
+        ><span class="brand-mark">✦</span
+        ><span>pitch<span>pilot</span></span></a
+      >
+      <nav class="app-nav">
+        <a href="workspace.html">Workspace</a
+        ><a class="active" href="history.html">History</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-small button-primary" href="workspace.html"
+          >New project <span>+</span></a
+        >
+      </div>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
+    </header>
+    <main class="container history-main">
+      <div class="page-intro">
+        <div>
+          <div class="eyebrow">Archive / Your thinking, over time</div>
+          <h1>Project<br /><em>history.</em></h1>
+        </div>
+        <p class="intro-note">
+          Every challenge is a snapshot of your thinking. Keep the useful ones
+          close.
+        </p>
+      </div>
+      <div id="historyList" class="history-list"></div>
+    </main>
+    <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+    <script src="../js/utils.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/motion.js"></script>
+  </body>
+</html>
