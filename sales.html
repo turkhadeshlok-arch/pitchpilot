@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Practice better sales conversations with PitchPilot." />
+    <title>Sales Coach — PitchPilot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body class="app-page sales-page">
+    <header class="app-header container">
+      <a class="brand" href="../index.html"><span class="brand-mark">✦</span><span>pitch<span>pilot</span></span></a>
+      <nav class="app-nav"><a href="workspace.html">Founder mode</a><a class="active" href="sales.html">Sales coach</a><a href="history.html">History</a></nav>
+      <div class="header-actions"><span class="mode-badge"><i></i> Adaptive coach</span><a class="button button-small button-ghost" href="../index.html">Exit <span>↗</span></a></div>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </header>
+
+    <main class="container sales-main">
+      <div class="page-intro sales-intro"><div><div class="eyebrow">Salesperson mode / Conversation coach</div><h1>Turn selling into<br /><em>a better conversation.</em></h1></div><div><p class="intro-note">Learn the offer. Practice the pressure. Leave every conversation sharper.</p><a class="text-link" href="sales.html?demo=1">Try the 2-minute demo <span>→</span></a></div></div>
+      <section class="sales-onboarding" id="salesOnboarding">
+        <div class="chat-intro"><div class="coach-avatar">✦</div><div><span class="mono">PITCHPILOT COACH</span><h2>Let’s get you ready<br />for the next <em>conversation.</em></h2><p>I’ll ask a few practical questions, then build your scripts and roleplay.</p></div></div>
+        <form id="salesForm" class="sales-form" novalidate>
+          <div class="template-picker"><label for="industryTemplate">Start from an industry template <span class="optional-label">Optional</span></label><select id="industryTemplate" name="industryTemplate"><option value="">Custom offer</option><option value="real-estate">Real estate</option><option value="saas">SaaS / software</option><option value="education">Education</option><option value="solar">Solar / energy</option><option value="insurance">Insurance</option><option value="local">Local services</option></select><small>Preload a realistic customer, channel, objection, and goal.</small></div>
+          <div class="conversation-question"><span>01</span><div><label for="product">Tell me what you’re selling.</label><textarea id="product" name="product" rows="3" placeholder="e.g. A solar backup system for small shops that keeps essential equipment running during power cuts." required></textarea></div></div>
+          <div class="conversation-question"><span>02</span><div><label for="price">What does it cost?</label><input id="price" name="price" placeholder="e.g. ₹35,000 installed, with monthly payment option" /></div></div>
+          <div class="conversation-question"><span>03</span><div><label for="customers">Who usually buys it?</label><input id="customers" name="customers" placeholder="e.g. Small shop owners and neighborhood pharmacies" required /></div></div>
+          <div class="conversation-question"><span>04</span><div><label for="channel">How are you selling?</label><select id="channel" name="channel"><option value="door-to-door">Door-to-door</option><option value="in-store">In-store</option><option value="phone">Over the phone</option><option value="online">Online / WhatsApp</option></select></div></div>
+          <div class="conversation-question"><span>05</span><div><label for="objections">What objections do customers usually give you?</label><textarea id="objections" name="objections" rows="2" placeholder="e.g. Too expensive, need to ask my partner, already use another supplier"></textarea></div></div>
+          <div class="conversation-question optional-question"><span>06</span><div><label for="goal">What is the goal of the conversation?</label><input id="goal" name="goal" placeholder="e.g. Book a demo or get permission to follow up" required /></div></div>
+          <div class="sales-context-grid"><div><label for="location">Location / context</label><input id="location" name="location" placeholder="e.g. Koramangala, weekday afternoon" /></div><div><label for="accountType">Household or business type</label><input id="accountType" name="accountType" placeholder="e.g. Family home, retail shop" /></div></div>
+          <div class="sales-submit"><p><span class="sparkle">✦</span> I’ll turn this into language you can actually use.</p><button class="button button-primary button-large" type="submit">Build my sales kit <span>→</span></button></div>
+        </form>
+      </section>
+      <section class="sales-kit hidden" id="salesKit"></section>
+      <section class="roleplay-shell hidden" id="roleplayShell"></section>
+      <section class="visit-shell hidden" id="visitShell"></section>
+    </main>
+    <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+    <div id="loadingOverlay" class="loading-overlay hidden"><div class="loading-card"><div class="loader-orbit">✦</div><p>Learning your offer<span>...</span></p><small>Building a conversation coach around it</small></div></div>
+   <script>
+  window.PITCHPILOT_CONFIG = {
+    mode: "live",
+    transport: "direct",
+    apiKey: "AQ.Ab8RN6KS1DeojYMIIglJptPWsvZ83OPwxRLf3Af9QglSqOKTTA"
+  };
+</script>
+
+    <script src="../js/utils.js"></script><script src="../js/storage.js"></script><script src="../js/ai.js"></script><script src="../js/ui.js"></script><script src="../js/sales.js?v=pro-demo6"></script><script src="../js/app.js"></script><script src="../js/motion.js"></script>
+  </body>
+</html>
